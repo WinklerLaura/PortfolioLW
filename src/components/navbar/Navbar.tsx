@@ -26,8 +26,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import logoImage from "../../assets/logolw.svg";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["About us", "Read more"];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -48,10 +49,15 @@ function ResponsiveAppBar() {
             sx={{ backgroundColor: "#40534C", borderRadius: "0px 0px 5px 5px" }}
         >
             <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    <AdbIcon
-                        sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-                    />
+                <Toolbar>
+                    <IconButton>
+                        <img
+                            src={logoImage}
+                            alt="logoImage"
+                            style={{ maxWidth: "50px" }}
+                        />
+                    </IconButton>
+
                     <Typography
                         variant="h6"
                         noWrap
@@ -60,14 +66,12 @@ function ResponsiveAppBar() {
                         sx={{
                             mr: 2,
                             display: { xs: "none", md: "flex" },
-                            fontFamily: "monospace",
                             fontWeight: 700,
-                            letterSpacing: ".3rem",
                             color: "inherit",
                             textDecoration: "none",
                         }}
                     >
-                        LOGO
+                        ProjectName
                     </Typography>
 
                     <Box
