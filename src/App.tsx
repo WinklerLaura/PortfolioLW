@@ -24,9 +24,7 @@ const App = () => {
                 </div>
                 <div className={styles.rightNavContainer}>
                     <div className={styles.box}>
-                        <Box>
-                            <h1>Hello World</h1>
-                        </Box>
+                        <h1>Hello World</h1>
                     </div>
                 </div>
             </div>
