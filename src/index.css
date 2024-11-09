@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    --beige: #ddd5c9;
+    --lightGreen: #677d6a;
+    --middleGreen: #40534c;
+    --darkGreen: #1a3636;
 }
 
 body {
-    background: #1a3636;
+    background: var(--darkGreen);
 }
