@@ -2,12 +2,13 @@ import styles from "./PageLayout.module.css";
 import helloGraphic from "../../assets/helloGraphic.svg";
 import linesGraphic from "../../assets/linesGraphic.svg";
 import curvedGraphic from "../../assets/curvedGraphic.svg";
+import { PropsWithChildren } from "react";
 
-interface PageLayoutProps {
+interface PageLayoutProps extends PropsWithChildren {
     image: string;
 }
 
-export const PageLayout = ({ image }: PageLayoutProps) => {
+export const PageLayout = ({ image, children }: PageLayoutProps) => {
     const currentImage = image === "helloGraphic" ? helloGraphic : helloGraphic;
     return (
         <div className={styles.container}>
@@ -21,9 +22,7 @@ export const PageLayout = ({ image }: PageLayoutProps) => {
                     style={{ maxHeight: "800px", height: "40vh" }}
                 />
             </div>
-            <div className={styles.content}>
-                <h1>Content</h1>
-            </div>
+            <div className={styles.content}>{children}</div>
 
             <div className={styles.rightGraphics}>
                 <img

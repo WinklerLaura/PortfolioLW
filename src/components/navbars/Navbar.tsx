@@ -1,7 +1,6 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-
 import { myColors } from "../../utils/myColors";
 
 function NavBar() {
@@ -23,7 +22,7 @@ function NavBar() {
                     variant="h6"
                     noWrap
                     component="a"
-                    href="#app-bar-with-responsive-menu"
+                    href="/"
                     sx={{
                         fontWeight: 700,
                         color: myColors.beige,

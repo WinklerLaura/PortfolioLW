@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes as RouterRoutes } from "react-router-dom";
-import { HomePage } from "./components/pages/HomePage";
-import { AboutPage } from "./components/pages/AboutPage";
-import { ProjectsPage } from "./components/pages/ProjectsPage";
-import { ContactPage } from "./components/pages/ContactPage";
+import { HomePage } from "./components/pages/homePage/HomePage";
+import { AboutPage } from "./components/pages/aboutPage/AboutPage";
+import { ProjectsPage } from "./components/pages/projectsPage/ProjectsPage";
+import { ContactPage } from "./components/pages/contactPage/ContactPage";
 
 export const Routes = () => {
     return (
