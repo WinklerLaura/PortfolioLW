@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     margin-top: 3vh;
-    height: 45vh;
+    height: 40vh;
 }
 
 .leftNavMenu {
@@ -35,16 +35,4 @@
 
 .rightContainer {
     grid-area: rightContainer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.box {
-    border: 2px solid var(--beige);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-    width: 30vh;
 }

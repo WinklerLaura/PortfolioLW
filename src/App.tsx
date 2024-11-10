@@ -2,6 +2,7 @@ import styles from "./App.module.css";
 import NavBar from "./components/navbar/Navbar";
 import navImage from "./assets/ImgDev.svg";
 import LeftNavMenuButton from "./components/customizedMuiComponents/LeftNavMenuButton";
+import { Routes } from "./Routes";
 
 const App = () => {
     return (
@@ -21,10 +22,8 @@ const App = () => {
                         <LeftNavMenuButton>Contact</LeftNavMenuButton>
                     </div>
                 </div>
-                <div className={styles.rightNavContainer}>
-                    <div className={styles.box}>
-                        <h1>Hello World</h1>
-                    </div>
+                <div className={styles.rightContainer}>
+                    <Routes />
                 </div>
             </div>
         </div>
