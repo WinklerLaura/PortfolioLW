@@ -13,13 +13,21 @@ export const PageLayout = ({ image, children }: PageLayoutProps) => {
     return (
         <div className={styles.container}>
             <div className={styles.headerGraphics}>
-                <img src={currentImage} alt="headerGraphics" />
+                <img
+                    src={currentImage}
+                    alt="headerGraphics"
+                    style={{
+                        maxHeight: "800px",
+                        height: "12vw",
+                        minHeight: "100px",
+                    }}
+                />
             </div>
             <div className={styles.leftGraphics}>
                 <img
                     src={linesGraphic}
                     alt="leftGraphics"
-                    style={{ maxHeight: "800px", height: "40vh" }}
+                    style={{ maxHeight: "800px", width: "12vw" }}
                 />
             </div>
             <div className={styles.content}>{children}</div>
@@ -28,7 +36,7 @@ export const PageLayout = ({ image, children }: PageLayoutProps) => {
                 <img
                     src={curvedGraphic}
                     alt="rightGraphics"
-                    style={{ maxHeight: "800px", height: "50vh" }}
+                    style={{ maxHeight: "800px", height: "25vw" }}
                 />
             </div>
         </div>

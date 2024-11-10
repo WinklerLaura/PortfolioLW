@@ -18,13 +18,14 @@
     flex-direction: column;
     justify-content: flex-start;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    width: 25vw;
 }
 
 .leftNavImageWrapper {
     display: flex;
     justify-content: center;
     margin-top: 3vh;
-    height: 40vh;
+    height: 22vw;
 }
 
 .rightContainer {
