@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import styles from "./App.module.css";
 import NavBar from "./components/navbar/Navbar";
 import navImage from "./assets/ImgDev.svg";
