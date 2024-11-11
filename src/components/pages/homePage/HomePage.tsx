@@ -1,6 +1,7 @@
-import { PropsWithChildren } from "react";
 import { PageLayout } from "../PageLayout";
 import styles from "./HomePage.module.css";
+import { Typography } from "@mui/material";
+import { myColors } from "../../../utils/myColors";
 
 const homeContent = {
     title: "Welcome to my digital workspace!",
@@ -20,19 +21,32 @@ const homeContent = {
     ],
 };
 
-const ContentParagraph = ({ children }: PropsWithChildren) => (
-    <p className={styles.paragraph}>{children}</p>
-);
-
 export const HomePage = () => {
     return (
         <PageLayout image={"helloGraphic"}>
             <div className={styles.contentContainer}>
-                <h1 className={styles.title}>{homeContent.title}</h1>
+                <Typography
+                    sx={{
+                        paddingBottom: "1rem",
+                        color: myColors.lightGreen,
+                        fontSize: "2rem",
+                        textAlign: "center",
+                    }}
+                >
+                    {homeContent.title}
+                </Typography>
                 {homeContent.sections.map((section) => (
-                    <ContentParagraph key={section.id}>
+                    <Typography
+                        key={section.id}
+                        sx={{
+                            color: myColors.beige,
+                            padding: "0.2rem",
+                            fontSize: "1.2rem",
+                            textAlign: "justify",
+                        }}
+                    >
                         {section.text}
-                    </ContentParagraph>
+                    </Typography>
                 ))}
             </div>
         </PageLayout>

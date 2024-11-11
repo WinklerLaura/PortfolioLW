@@ -1,1 +1,24 @@
-This template provides the starting point for a responsive react project.
+# Personal Portfolio Website
+
+## Overview
+
+A React-based personal portfolio website showcasing my professional journey, skills, and projects.
+
+## Technologies Used
+
+-   React
+-   TypeScript
+-   React Router
+-   CSS Modules
+
+## Features
+
+-   Responsive design
+-   Multiple pages:
+    -   Home
+    -   About
+    -   Projects
+    -   Contact
+-   Navigation with left sidebar and top navbar
+
+## Project Structure

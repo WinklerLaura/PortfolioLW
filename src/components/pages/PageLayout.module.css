@@ -20,8 +20,8 @@
     grid-area: headerGraphics;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 1vh;
+    align-items: center;
+    padding-top: 4vh;
 }
 
 .leftGraphics {
