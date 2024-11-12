@@ -1,6 +1,6 @@
 import styles from "./App.module.css";
 import TopNavBar from "./components/navbars/TopNavbar";
-import navImage from "./assets/ImgDev.svg";
+import navImage from "./assets/imgDev.svg";
 import { Routes } from "./Routes";
 import { LeftNavBarMenu } from "./components/navbars/LeftNavBarMenu";
 

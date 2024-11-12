@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import LeftNavMenuButton from "../customizedMuiComponents/LeftNavMenuButton";
 import styles from "./LeftNavBarMenu.module.css";
+import { myFontSizes } from "../../utils/myFontSizes";
 
 interface MenuItem {
     label: string;
@@ -39,6 +40,14 @@ export const LeftNavBarMenu = () => {
                 <LeftNavMenuButton
                     key={item.path}
                     onClick={() => handleClick(item)}
+                    sx={{
+                        fontSize: {
+                            sm: myFontSizes.title.xs,
+                            md: myFontSizes.title.sm,
+                            lg: myFontSizes.title.md,
+                            xl: myFontSizes.title.lg,
+                        },
+                    }}
                 >
                     {item.label}
                 </LeftNavMenuButton>

@@ -2,19 +2,26 @@ import { PageLayout } from "../PageLayout";
 import { Typography } from "@mui/material";
 import { myColors } from "../../../utils/myColors";
 import { contentHomePage } from "../../../textContent/contentHomePage";
-import styles from "./HomePage.module.css";
 import { myFontSizes } from "../../../utils/myFontSizes";
+import headerHello from "../../../assets/headerGraphics/headerHello.svg";
+import styles from "../Pages.module.css";
 
 export const HomePage = () => {
     return (
-        <PageLayout image={"helloGraphic"}>
+        <PageLayout image={headerHello}>
             <div className={styles.contentContainer}>
                 <Typography
                     sx={{
                         paddingBottom: "1rem",
                         color: myColors.lightGreen,
-                        fontSize: "2rem",
                         textAlign: "center",
+                        fontSize: {
+                            xs: myFontSizes.title.xs,
+                            sm: myFontSizes.title.sm,
+                            md: myFontSizes.title.md,
+                            lg: myFontSizes.title.lg,
+                            xl: myFontSizes.title.xl,
+                        },
                     }}
                 >
                     {contentHomePage.title}

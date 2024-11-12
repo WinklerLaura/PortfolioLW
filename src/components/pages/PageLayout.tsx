@@ -1,5 +1,4 @@
 import styles from "./PageLayout.module.css";
-import helloGraphic from "../../assets/helloGraphic.svg";
 import linesGraphic from "../../assets/linesGraphic.svg";
 import curvedGraphic from "../../assets/curvedGraphic.svg";
 import { PropsWithChildren } from "react";
@@ -10,7 +9,7 @@ interface PageLayoutProps extends PropsWithChildren {
 }
 
 export const PageLayout = ({ image, children }: PageLayoutProps) => {
-    const currentImage = image === "helloGraphic" ? helloGraphic : helloGraphic;
+    const currentImage = image;
     return (
         <div className={styles.container}>
             <div className={styles.headerGraphics}>
