@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import NavBar from "./components/navbars/Navbar";
+import TopNavBar from "./components/navbars/TopNavbar";
 import navImage from "./assets/ImgDev.svg";
 import { Routes } from "./Routes";
 import { LeftNavBarMenu } from "./components/navbars/LeftNavBarMenu";
@@ -9,7 +9,7 @@ const App = () => {
         <div>
             <div className={styles.container}>
                 <div className={styles.topNavContainer}>
-                    <NavBar />
+                    <TopNavBar />
                 </div>
                 <div className={styles.leftNavContainer}>
                     <div className={styles.leftNavImageWrapper}>

@@ -3,7 +3,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { myColors } from "../../utils/myColors";
 
-function NavBar() {
+function TopNavBar() {
     return (
         <AppBar
             position="static"
@@ -35,4 +35,4 @@ function NavBar() {
         </AppBar>
     );
 }
-export default NavBar;
+export default TopNavBar;
