@@ -3,20 +3,42 @@ import { Box, Card, CardMedia } from "@mui/material";
 import headerProjects from "../../../assets/headerGraphics/headerProjects.svg";
 import project1 from "../../../assets/projectImages/project1.svg";
 
+////////////////////////////
 export const ProjectsPage = () => {
-    const cardStyle = {
-        width: "630px",
-        height: "230px",
-        minHeight: "230px",
-        margin: "2vh 2vw",
-        padding: "15px 15px",
+    // const cardStyle = {
+    //     width: { xs: "100%", sm: "630px" },
+    //     height: { xs: "auto", sm: "230px" },
+    //     minHeight: "230px",
+    //     margin: "2vh 2vw",
+    //     padding: "15px 15px",
+    //     borderRadius: "25px",
+    //     boxShadow: "2px 2px rgba(0, 0, 0, 0.1)",
+    //     bgcolor: "rgb(221, 213, 201, 0.04)",
+    // };
+
+    const cardStyle2 = {
+        height: "30vh",
+        width: "28vw",
+        margin: "1vh 0.3vw",
         borderRadius: "25px",
         boxShadow: "2px 2px rgba(0, 0, 0, 0.1)",
         bgcolor: "rgb(221, 213, 201, 0.04)",
     };
 
+    // const cardMediaStyle = {
+    //     height: { xs: 1, sm: 200 },
+    //     objectFit: "contain",
+    // };
+
+    const cardMediaStyle2 = {
+        height: "13vh",
+        width: "26vw",
+        margin: "2.2vh 1vw",
+        borderRadius: "25px",
+    };
+
     const parentCardStyle = {
-        maxWidth: "40vw",
+        maxWidth: { xs: "100%", sm: "40vw" },
         maxHeight: "60vh",
         bgcolor: "rgb(221, 213, 201, 0.04)",
         padding: "1.2rem",
@@ -40,35 +62,23 @@ export const ProjectsPage = () => {
         <div style={{ height: "100%" }}>
             <PageLayout image={headerProjects}>
                 <Box sx={parentCardStyle}>
-                    <Card sx={cardStyle}>
+                    <Card sx={cardStyle2}>
                         <CardMedia
-                            sx={{
-                                height: 200,
-                                width: "100%",
-                                objectFit: "contain",
-                            }}
+                            sx={cardMediaStyle2}
                             image={project1}
                             title="project1Image"
                         />
                     </Card>
-                    <Card sx={cardStyle}>
+                    <Card sx={cardStyle2}>
                         <CardMedia
-                            sx={{
-                                height: 200,
-                                width: "100%",
-                                objectFit: "contain",
-                            }}
+                            sx={cardMediaStyle2}
                             image={project1}
                             title="project1Image"
                         />
                     </Card>
-                    <Card sx={cardStyle}>
+                    <Card sx={cardStyle2}>
                         <CardMedia
-                            sx={{
-                                height: 200,
-                                width: "100%",
-                                objectFit: "contain",
-                            }}
+                            sx={cardMediaStyle2}
                             image={project1}
                             title="project1Image"
                         />
