@@ -3,8 +3,16 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
 import { Button } from "@mui/material";
 import styles from "./LeftNavBarIcons.module.css";
+import { myColors } from "../../utils/myColors";
 
 export const LeftNavBarIcons = () => {
+    const buttonStyle = {
+        minWidth: 0,
+        padding: 5,
+        fontSize: "4vh",
+        color: myColors.lightGreen,
+    };
+
     return (
         <div className={styles.iconContainer}>
             <Button
@@ -15,12 +23,7 @@ export const LeftNavBarIcons = () => {
                         "noopener,noreferrer"
                     );
                 }}
-                style={{
-                    minWidth: 0,
-                    padding: 5,
-                    fontSize: "4vh",
-                    color: "#0077B5",
-                }}
+                style={{ ...buttonStyle }}
             >
                 <FaLinkedin />
             </Button>
@@ -32,12 +35,7 @@ export const LeftNavBarIcons = () => {
                         "noopener,noreferrer"
                     );
                 }}
-                style={{
-                    minWidth: 0,
-                    padding: 5,
-                    fontSize: "4vh",
-                    color: "black",
-                }}
+                style={{ ...buttonStyle }}
             >
                 <FaSquareXTwitter />
             </Button>
@@ -49,12 +47,7 @@ export const LeftNavBarIcons = () => {
                         "noopener,noreferrer"
                     );
                 }}
-                style={{
-                    minWidth: 0,
-                    padding: 5,
-                    fontSize: "4vh",
-                    color: "white",
-                }}
+                style={{ ...buttonStyle }}
             >
                 <FaSquareGithub />
             </Button>

@@ -10,9 +10,5 @@ export const contentHomePage = {
             id: "callToAction",
             text: "Feel free to navigate through my portfolio to learn more about my background, explore my projects, or get in touch to discuss exciting opportunities.",
         },
-        {
-            id: "mySkills",
-            text: "My skills:",
-        },
     ],
 };
