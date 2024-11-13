@@ -18,7 +18,7 @@ A React-based personal portfolio website showcasing my professional journey, ski
     -   Home
     -   About
     -   Projects
-    -   Contact
+    -   Skills
 -   Navigation with left sidebar and top navbar
 
 ## Project Structure

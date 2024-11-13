@@ -1,15 +1,15 @@
-import { Typography } from "@mui/material";
 import { PageLayout } from "../PageLayout";
-import styles from "../Pages.module.css";
+import { Typography } from "@mui/material";
 import { myColors } from "../../../utils/myColors";
 import { myFontSizes } from "../../../utils/myFontSizes";
-import { contentAboutPage } from "../../../textContent/contentAboutPage";
-import headerAbout from "../../../assets/headerGraphics/headerAbout.svg";
+import { contentSkillsPage } from "../../../textContent/contentSkillsPage";
+import headerSkills from "../../../assets/headerGraphics/headerSkills.svg";
+import styles from "../Pages.module.css";
 
-export const AboutPage = () => {
+export const SkillsPage = () => {
     return (
         <div style={{ height: "100%" }}>
-            <PageLayout image={headerAbout} backgroundBox={true}>
+            <PageLayout image={headerSkills} backgroundBox={true}>
                 <div className={styles.contentContainer}>
                     <Typography
                         sx={{
@@ -25,9 +25,9 @@ export const AboutPage = () => {
                             },
                         }}
                     >
-                        {contentAboutPage.title}
+                        {contentSkillsPage.title}
                     </Typography>
-                    {contentAboutPage.textSections.map((section) => (
+                    {contentSkillsPage.textSections.map((section) => (
                         <Typography
                             key={section.id}
                             sx={{

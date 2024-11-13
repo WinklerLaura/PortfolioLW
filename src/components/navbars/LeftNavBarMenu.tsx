@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import LeftNavMenuButton from "../customizedMuiComponents/LeftNavMenuButton";
-import styles from "./LeftNavBarMenu.module.css";
 import { myFontSizes } from "../../utils/myFontSizes";
+import styles from "./LeftNavBarMenu.module.css";
 
 interface MenuItem {
     label: string;
@@ -24,8 +24,8 @@ export const LeftNavBarMenu = () => {
             path: "/projects",
         },
         {
-            label: "Contact",
-            path: "/contact",
+            label: "Skills",
+            path: "/skills",
         },
     ];
 

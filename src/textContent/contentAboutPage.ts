@@ -1,5 +1,5 @@
 export const contentAboutPage = {
-    title: "I'm Laura. A frontend developer and AI enthusiast.",
+    title: "I'm Laura. Frontend developer and AI enthusiast.",
     textSections: [
         {
             id: "intro",
@@ -11,7 +11,7 @@ export const contentAboutPage = {
         },
         {
             id: "callToAction",
-            text: "For more insights into my professional journey and accomplishments, feel free to explore my LinkedIn or take a look at my CV.",
+            text: "For more insights into my professional journey and accomplishments, feel free to explore my LinkedIn or contact me directly. I look forward to connecting with you!",
         },
     ],
 };
