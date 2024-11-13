@@ -1,5 +1,5 @@
 import { PageLayout } from "../PageLayout";
-import { Box, Card, CardMedia } from "@mui/material";
+import { Card, CardMedia } from "@mui/material";
 import headerProjects from "../../../assets/headerGraphics/headerProjects.svg";
 import project1 from "../../../assets/projectImages/project1.svg";
 
@@ -17,6 +17,7 @@ export const ProjectsPage = () => {
 
     const parentCardStyle = {
         maxWidth: "40vw",
+        minWidth: "670px",
         maxHeight: "60vh",
         bgcolor: "rgb(221, 213, 201, 0.04)",
         padding: "1.2rem",
@@ -25,7 +26,7 @@ export const ProjectsPage = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        overflowX: "auto",
+        overflowY: "auto",
         "&::-webkit-scrollbar": {
             width: "8px",
             backgroundColor: "transparent",
@@ -39,7 +40,7 @@ export const ProjectsPage = () => {
     return (
         <div style={{ height: "100%" }}>
             <PageLayout image={headerProjects}>
-                <Box sx={parentCardStyle}>
+                <Card sx={parentCardStyle}>
                     <Card sx={cardStyle}>
                         <CardMedia
                             sx={{
@@ -73,7 +74,7 @@ export const ProjectsPage = () => {
                             title="project1Image"
                         />
                     </Card>
-                </Box>
+                </Card>
             </PageLayout>
         </div>
     );
