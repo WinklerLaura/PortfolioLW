@@ -31,3 +31,8 @@
 .rightContainer {
     grid-area: rightContainer;
 }
+
+.iconsContainer {
+    margin-top: auto;
+    padding-bottom: 30px;
+}

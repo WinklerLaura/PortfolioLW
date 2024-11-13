@@ -14,9 +14,5 @@ export const contentHomePage = {
             id: "mySkills",
             text: "My skills:",
         },
-        {
-            id: "skills",
-            text: "React | TypeScript | JavaScript | HTML | CSS | Material-UI | Python | Git | GitHub | Jira | Confluence | Neural Networks | Machine Learning | Responsive Web Design | Linux | Canva | Figma",
-        },
     ],
 };
