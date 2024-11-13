@@ -6,10 +6,26 @@ import { Box } from "@mui/material";
 
 interface PageLayoutProps extends PropsWithChildren {
     image: string;
+    backgroundBox?: boolean;
 }
 
-export const PageLayout = ({ image, children }: PageLayoutProps) => {
+export const PageLayout = ({
+    backgroundBox,
+    image,
+    children,
+}: PageLayoutProps) => {
+    const boxStyle = backgroundBox
+        ? {
+              width: "40vw",
+              bgcolor: "rgb(221, 213, 201, 0.04)",
+              padding: "1.2rem",
+              borderRadius: "25px",
+              boxShadow: "2px 2px rgba(0, 0, 0, 0.1)",
+          }
+        : null;
+
     const currentImage = image;
+
     return (
         <div className={styles.container}>
             <div className={styles.headerGraphics}>
@@ -33,11 +49,7 @@ export const PageLayout = ({ image, children }: PageLayoutProps) => {
             <div className={styles.content}>
                 <Box
                     sx={{
-                        width: "40vw",
-                        bgcolor: "rgb(221, 213, 201, 0.04)",
-                        padding: "1.2rem",
-                        borderRadius: "25px",
-                        boxShadow: "2px 2px rgba(0, 0, 0, 0.1)",
+                        ...boxStyle,
                     }}
                 >
                     {children}

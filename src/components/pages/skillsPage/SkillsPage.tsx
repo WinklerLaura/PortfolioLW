@@ -1,15 +1,15 @@
 import { PageLayout } from "../PageLayout";
 import { Typography } from "@mui/material";
-import styles from "../Pages.module.css";
 import { myColors } from "../../../utils/myColors";
 import { myFontSizes } from "../../../utils/myFontSizes";
-import headerSkills from "../../../assets/headerGraphics/headerSkills.svg";
 import { contentSkillsPage } from "../../../textContent/contentSkillsPage";
+import headerSkills from "../../../assets/headerGraphics/headerSkills.svg";
+import styles from "../Pages.module.css";
 
 export const SkillsPage = () => {
     return (
         <div style={{ height: "100%" }}>
-            <PageLayout image={headerSkills}>
+            <PageLayout image={headerSkills} backgroundBox={true}>
                 <div className={styles.contentContainer}>
                     <Typography
                         sx={{

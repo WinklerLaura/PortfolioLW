@@ -8,7 +8,7 @@ import styles from "../Pages.module.css";
 
 export const HomePage = () => {
     return (
-        <PageLayout image={headerHello}>
+        <PageLayout image={headerHello} backgroundBox={true}>
             <div className={styles.contentContainer}>
                 <Typography
                     sx={{

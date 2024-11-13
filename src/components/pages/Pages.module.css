@@ -17,3 +17,9 @@
     font-size: 1.3rem;
     text-align: justify;
 }
+
+.projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

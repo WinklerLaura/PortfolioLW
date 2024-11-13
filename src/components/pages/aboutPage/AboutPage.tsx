@@ -9,7 +9,7 @@ import headerAbout from "../../../assets/headerGraphics/headerAbout.svg";
 export const AboutPage = () => {
     return (
         <div style={{ height: "100%" }}>
-            <PageLayout image={headerAbout}>
+            <PageLayout image={headerAbout} backgroundBox={true}>
                 <div className={styles.contentContainer}>
                     <Typography
                         sx={{
