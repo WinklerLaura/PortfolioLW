@@ -3,19 +3,7 @@ import { Box, Card, CardMedia } from "@mui/material";
 import headerProjects from "../../../assets/headerGraphics/headerProjects.svg";
 import project1 from "../../../assets/projectImages/project1.svg";
 
-////////////////////////////
 export const ProjectsPage = () => {
-    // const cardStyle = {
-    //     width: { xs: "100%", sm: "630px" },
-    //     height: { xs: "auto", sm: "230px" },
-    //     minHeight: "230px",
-    //     margin: "2vh 2vw",
-    //     padding: "15px 15px",
-    //     borderRadius: "25px",
-    //     boxShadow: "2px 2px rgba(0, 0, 0, 0.1)",
-    //     bgcolor: "rgb(221, 213, 201, 0.04)",
-    // };
-
     const cardStyle2 = {
         height: "30vh",
         width: "28vw",
@@ -25,16 +13,12 @@ export const ProjectsPage = () => {
         bgcolor: "rgb(221, 213, 201, 0.04)",
     };
 
-    // const cardMediaStyle = {
-    //     height: { xs: 1, sm: 200 },
-    //     objectFit: "contain",
-    // };
-
     const cardMediaStyle2 = {
         height: "13vh",
         width: "26vw",
-        margin: "2.2vh 1vw",
+        margin: "2vh 1vw",
         borderRadius: "25px",
+        objectFit: "contain",
     };
 
     const parentCardStyle = {
@@ -62,6 +46,13 @@ export const ProjectsPage = () => {
         <div style={{ height: "100%" }}>
             <PageLayout image={headerProjects}>
                 <Box sx={parentCardStyle}>
+                    <Card sx={cardStyle2}>
+                        <CardMedia
+                            sx={cardMediaStyle2}
+                            image={project1}
+                            title="project1Image"
+                        />
+                    </Card>
                     <Card sx={cardStyle2}>
                         <CardMedia
                             sx={cardMediaStyle2}
