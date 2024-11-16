@@ -1,4 +1,4 @@
-export const contentHomePage = {
+export const getContentHomePage = {
     title: "Welcome to my digital workspace!",
     textSections: [
         {

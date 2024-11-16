@@ -11,16 +11,20 @@ import { ProjectsModal } from "./ProjectsModal";
 
 export const ProjectsPage = () => {
     const [openModal, setOpenModal] = useState(false);
+    const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
+        null
+    );
 
     const projectCards = [
-        { id: 1, image: project1, title: "Project 1" },
-        { id: 2, image: project2, title: "Project 2" },
-        { id: 3, image: project3, title: "Project 3" },
-        { id: 4, image: project4, title: "Project 4" },
+        { id: 0, image: project1, title: "Portfolio Laura Winkler" },
+        { id: 1, image: project2, title: "Automated Data Extraction" },
+        { id: 2, image: project3, title: "cogvisAI: Maintenance, Features" },
+        { id: 3, image: project4, title: "Convolutional Neural Network" },
     ];
 
-    const handleClick = () => {
+    const handleClick = (projectId: number) => {
         setOpenModal(true);
+        setSelectedProjectId(projectId);
     };
 
     return (
@@ -40,14 +44,17 @@ export const ProjectsPage = () => {
                                 component="img"
                                 sx={cardMediaStyle}
                                 image={project.image}
-                                title={project.title}
                                 loading="lazy"
-                                onClick={handleClick}
+                                onClick={() => handleClick(project.id)}
                             />
                         </CardContent>
                     ))}
                 </Box>
-                <ProjectsModal open={openModal} onOpenModal={setOpenModal} />
+                <ProjectsModal
+                    open={openModal}
+                    onOpenModal={setOpenModal}
+                    projectId={selectedProjectId}
+                />
             </PageLayout>
         </Box>
     );

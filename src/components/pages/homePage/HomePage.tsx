@@ -1,7 +1,7 @@
 import { PageLayout } from "../PageLayout";
 import { Typography } from "@mui/material";
 import { myColors } from "../../../utils/myColors";
-import { contentHomePage } from "../../../textContent/contentHomePage";
+import { getContentHomePage } from "../../../textContent/getContentHomePage";
 import { myFontSizes } from "../../../utils/myFontSizes";
 import headerHello from "../../../assets/headerGraphics/headerHello.svg";
 import styles from "../Pages.module.css";
@@ -24,9 +24,9 @@ export const HomePage = () => {
                         },
                     }}
                 >
-                    {contentHomePage.title}
+                    {getContentHomePage.title}
                 </Typography>
-                {contentHomePage.textSections.map((section) => (
+                {getContentHomePage.textSections.map((section) => (
                     <Typography
                         key={section.id}
                         sx={{

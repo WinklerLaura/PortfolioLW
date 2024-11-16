@@ -1,4 +1,4 @@
-export const contentAboutPage = {
+export const getContentAboutPage = {
     title: "I'm Laura. Frontend developer and AI enthusiast.",
     textSections: [
         {

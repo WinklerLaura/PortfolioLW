@@ -1,4 +1,4 @@
-export const contentSkillsPage = {
+export const getContentSkillsPage = {
     title: null,
     textSections: [
         {

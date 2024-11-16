@@ -2,7 +2,7 @@ import { PageLayout } from "../PageLayout";
 import { Typography } from "@mui/material";
 import { myColors } from "../../../utils/myColors";
 import { myFontSizes } from "../../../utils/myFontSizes";
-import { contentSkillsPage } from "../../../textContent/contentSkillsPage";
+import { getContentSkillsPage } from "../../../textContent/getContentSkillsPage";
 import headerSkills from "../../../assets/headerGraphics/headerSkills.svg";
 import styles from "../Pages.module.css";
 
@@ -25,9 +25,9 @@ export const SkillsPage = () => {
                             },
                         }}
                     >
-                        {contentSkillsPage.title}
+                        {getContentSkillsPage.title}
                     </Typography>
-                    {contentSkillsPage.textSections.map((section) => (
+                    {getContentSkillsPage.textSections.map((section) => (
                         <Typography
                             key={section.id}
                             sx={{
