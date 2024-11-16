@@ -1,15 +1,18 @@
 import { PageLayout } from "../PageLayout";
 import { Box, CardContent, CardMedia } from "@mui/material";
+import { cardMediaStyle, parentCardStyle } from "./cardStyles";
 import headerProjects from "../../../assets/headerGraphics/headerProjects.svg";
 import project1 from "../../../assets/projectImages/project1.svg";
-import { cardMediaStyle, parentCardStyle } from "./cardStyles";
+import project2 from "../../../assets/projectImages/project2.svg";
+import project3 from "../../../assets/projectImages/project3.svg";
+import project4 from "../../../assets/projectImages/project4.svg";
 
 export const ProjectsPage = () => {
     const projectCards = [
         { id: 1, image: project1, title: "Project 1" },
-        { id: 2, image: project1, title: "Project 2" },
-        { id: 3, image: project1, title: "Project 3" },
-        { id: 4, image: project1, title: "Project 4" },
+        { id: 2, image: project2, title: "Project 2" },
+        { id: 3, image: project3, title: "Project 3" },
+        { id: 4, image: project4, title: "Project 4" },
     ];
 
     return (
