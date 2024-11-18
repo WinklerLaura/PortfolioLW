@@ -3,7 +3,7 @@ import linesGraphic from "../../assets/linesGraphic.svg";
 import curvedGraphic from "../../assets/curvedGraphic.svg";
 import { PropsWithChildren } from "react";
 
-import { CustomizedProjectsBox } from "../customizedMuiComponents/CustomizedProjectsBox";
+import { CustomizedBox } from "../customizedMuiComponents/CustomizedBox";
 
 interface PageLayoutProps extends PropsWithChildren {
     image: string;
@@ -38,9 +38,9 @@ export const PageLayout = ({
                 />
             </div>
             <div className={styles.content}>
-                <CustomizedProjectsBox backgroundBox={backgroundBox}>
+                <CustomizedBox backgroundBox={backgroundBox}>
                     {children}
-                </CustomizedProjectsBox>
+                </CustomizedBox>
             </div>
 
             <div className={styles.rightGraphics}>

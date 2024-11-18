@@ -1,10 +1,10 @@
 import { Typography } from "@mui/material";
 import { PageLayout } from "../PageLayout";
-import styles from "../Pages.module.css";
 import { myColors } from "../../../utils/myColors";
 import { myFontSizes } from "../../../utils/myFontSizes";
 import { getContentAboutPage } from "../../../textContent/getContentAboutPage";
 import headerAbout from "../../../assets/headerGraphics/headerAbout.svg";
+import styles from "../Pages.module.css";
 
 export const AboutPage = () => {
     return (
