@@ -2,14 +2,10 @@ import { Button, List, Stack, Typography } from "@mui/material";
 import { FaSquareGithub } from "react-icons/fa6";
 import { MdSmartDisplay } from "react-icons/md";
 import { iconButtonStyle } from "../muiTheme";
-import { myColors } from "../utils/myColors";
 import { CustomizedListItem } from "../components/customizedMuiComponents/CustomizedListItem";
 import TedAIHackthonPresentation from "../assets/video/TEDAIHackathonPresentation.pptx.mp4";
-
-export const titleStyle = {
-    color: myColors.beige,
-    fontWeight: "bold",
-};
+import { CustomizedLinkButton } from "../components/customizedMuiComponents/CustomizedLinkButton";
+import { CustomizedTypography } from "../components/customizedMuiComponents/CustomizedTypography";
 
 export const getContentDialog = (
     projectId: number | null,
@@ -21,28 +17,23 @@ export const getContentDialog = (
     if (projectId === 0) {
         if (section === "title") {
             return (
-                <Typography
-                    variant={"body1"}
-                    sx={{
-                        ...titleStyle,
-                    }}
-                >
+                <CustomizedTypography title>
                     Portfolio Laura Winkler (November 2024)
-                </Typography>
+                </CustomizedTypography>
             );
         }
         if (section === "text") {
             return (
                 <Stack alignItems="center">
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    <CustomizedTypography>
                         This portfolio showcases my journey in software
                         development and highlights the projects that showcase my
                         skills and creativity.
-                    </Typography>
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    </CustomizedTypography>
+                    <CustomizedTypography tools>
                         React | TypeScript | Material-UI | Git | GitHub | Canva
                         | Responsive Web Design
-                    </Typography>
+                    </CustomizedTypography>
                     <Typography variant={"h6"}>
                         <Button
                             onClick={() => {
@@ -65,29 +56,19 @@ export const getContentDialog = (
         if (section === "title") {
             return (
                 <Stack>
-                    <Typography
-                        variant={"body1"}
-                        sx={{
-                            ...titleStyle,
-                        }}
-                    >
+                    <CustomizedTypography title>
                         AI Against Human Trafficking
-                    </Typography>
-                    <Typography
-                        variant={"body1"}
-                        sx={{
-                            ...titleStyle,
-                        }}
-                    >
-                        - TEDAI Hackathon Project (October 2024)
-                    </Typography>
+                    </CustomizedTypography>
+                    <CustomizedTypography title>
+                        TEDAI Hackathon Project (October 2024)
+                    </CustomizedTypography>
                 </Stack>
             );
         }
         if (section === "text") {
             return (
                 <Stack alignItems="center">
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    <CustomizedTypography>
                         As the technical lead/builder in a cross-functional team
                         of three (alongside a designer and an advocate), we
                         engineered an automated media monitoring system to
@@ -96,8 +77,8 @@ export const getContentDialog = (
                         trafficking incidents, which currently affects an
                         estimated 50 million people globally, directly
                         contributing to UN Sustainable Development
-                    </Typography>
-                    <Typography variant={"body1"}>
+                    </CustomizedTypography>
+                    <CustomizedTypography>
                         <List>
                             <CustomizedListItem>
                                 - Implemented Gmail API integration to
@@ -121,17 +102,17 @@ export const getContentDialog = (
                                 incidents
                             </CustomizedListItem>
                         </List>
-                    </Typography>
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    </CustomizedTypography>
+                    <CustomizedTypography>
                         The TedAI Hackathon presentation that can be found below
                         was created in collaboration with Julia Macher (CEO,
                         Freedom Collaborative) and Joseph Thomas Thekkekara
                         (Technical Project Manager, Baubot)
-                    </Typography>
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    </CustomizedTypography>
+                    <CustomizedTypography tools>
                         Python | Docker | Gmail API | OpenAI API | LLM
                         Integration
-                    </Typography>
+                    </CustomizedTypography>
                     <Typography variant={"h6"}>
                         <Button
                             onClick={() => {
@@ -154,29 +135,19 @@ export const getContentDialog = (
         if (section === "title") {
             return (
                 <Stack>
-                    <Typography
-                        variant={"body1"}
-                        sx={{
-                            ...titleStyle,
-                        }}
-                    >
+                    <CustomizedTypography title>
                         cogvisAI: Maintenance, Features
-                    </Typography>
-                    <Typography
-                        variant={"body1"}
-                        sx={{
-                            ...titleStyle,
-                        }}
-                    >
+                    </CustomizedTypography>
+                    <CustomizedTypography title>
                         (since February 2023)
-                    </Typography>
+                    </CustomizedTypography>
                 </Stack>
             );
         }
         if (section === "text") {
             return (
                 <Stack alignItems="center">
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    <CustomizedTypography>
                         Over the past 2 years, I have had the privilege of
                         collaborating with Bit Perfect on an innovative project
                         for Cogvis, a company dedicated to transforming the
@@ -187,8 +158,8 @@ export const getContentDialog = (
                         leverages cutting-edge 3D smart sensors to enhance
                         safety for individuals receiving care, all while
                         ensuring compliance with privacy regulations.
-                    </Typography>
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    </CustomizedTypography>
+                    <CustomizedTypography>
                         The primary objective of this project was to create an
                         intuitive and multilingual user interface that
                         simplifies complex functionalities for nursing staff
@@ -197,11 +168,11 @@ export const getContentDialog = (
                         project aims to improve the overall quality of care and
                         safety for users by delivering real-time monitoring and
                         alerts.
-                    </Typography>
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    </CustomizedTypography>
+                    <CustomizedTypography>
                         Key Features include:
-                    </Typography>
-                    <Typography variant={"body1"}>
+                    </CustomizedTypography>
+                    <CustomizedTypography>
                         <List>
                             <CustomizedListItem>
                                 - User Interface Development: We designed a
@@ -228,62 +199,23 @@ export const getContentDialog = (
                                 efficiency.
                             </CustomizedListItem>
                         </List>
-                    </Typography>
-                    <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
+                    </CustomizedTypography>
+                    <CustomizedTypography tools>
                         React | TypeScript | Material-UI | Git | GitHub | Figma
                         | Responsive Web Design | Jira | Recharts | i18next
-                    </Typography>
+                    </CustomizedTypography>
                     <Typography variant={"h6"}>
-                        <Button
-                            variant="contained"
-                            onClick={() => {
-                                window.open(
-                                    "https://cogvis.ai/",
-                                    "_blank",
-                                    "noopener,noreferrer"
-                                );
-                            }}
-                            style={{
-                                ...iconButtonStyle,
-                                margin: "1rem",
-                                backgroundColor: myColors.lightGreen,
-                            }}
-                        >
-                            <Typography
-                                variant={"body1"}
-                                sx={{
-                                    textTransform: "none",
-                                    color: myColors.middleGreen,
-                                }}
-                            >
-                                cogvis
-                            </Typography>
-                        </Button>
-                        <Button
-                            variant="contained"
-                            onClick={() => {
-                                window.open(
-                                    "https://bitperfect.at/en/portfolio/front-end-development-ui-design-cogvis",
-                                    "_blank",
-                                    "noopener,noreferrer"
-                                );
-                            }}
-                            style={{
-                                ...iconButtonStyle,
-                                backgroundColor: myColors.lightGreen,
-                                margin: "1rem",
-                            }}
-                        >
-                            <Typography
-                                variant={"body1"}
-                                sx={{
-                                    textTransform: "none",
-                                    color: myColors.middleGreen,
-                                }}
-                            >
-                                bitperfect
-                            </Typography>
-                        </Button>
+                        <CustomizedLinkButton
+                            linkURL={"https://cogvis.ai/"}
+                            btnText={"cogvis"}
+                        />
+
+                        <CustomizedLinkButton
+                            linkURL={
+                                "https://bitperfect.at/en/portfolio/front-end-development-ui-design-cogvis"
+                            }
+                            btnText={"bitperfect"}
+                        />
                     </Typography>
                 </Stack>
             );
