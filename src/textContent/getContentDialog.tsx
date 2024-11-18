@@ -6,6 +6,8 @@ import { CustomizedListItem } from "../components/customizedMuiComponents/Custom
 import TedAIHackthonPresentation from "../assets/video/TEDAIHackathonPresentation.pptx.mp4";
 import { CustomizedLinkButton } from "../components/customizedMuiComponents/CustomizedLinkButton";
 import { CustomizedTypography } from "../components/customizedMuiComponents/CustomizedTypography";
+import masterThesisPDF from "../assets/pdfs/MasterThesis.pdf";
+import { FaRegFilePdf } from "react-icons/fa6";
 
 export const getContentDialog = (
     projectId: number | null,
@@ -17,9 +19,14 @@ export const getContentDialog = (
     if (projectId === 0) {
         if (section === "title") {
             return (
-                <CustomizedTypography title>
-                    Portfolio Laura Winkler (November 2024)
-                </CustomizedTypography>
+                <Stack>
+                    <CustomizedTypography title>
+                        Portfolio Laura Winkler
+                    </CustomizedTypography>
+                    <CustomizedTypography subtitle>
+                        (November 2024)
+                    </CustomizedTypography>
+                </Stack>
             );
         }
         if (section === "text") {
@@ -59,7 +66,7 @@ export const getContentDialog = (
                     <CustomizedTypography title>
                         AI Against Human Trafficking
                     </CustomizedTypography>
-                    <CustomizedTypography title>
+                    <CustomizedTypography subtitle>
                         TEDAI Hackathon Project (October 2024)
                     </CustomizedTypography>
                 </Stack>
@@ -138,7 +145,7 @@ export const getContentDialog = (
                     <CustomizedTypography title>
                         cogvisAI: Maintenance, Features
                     </CustomizedTypography>
-                    <CustomizedTypography title>
+                    <CustomizedTypography subtitle>
                         (since February 2023)
                     </CustomizedTypography>
                 </Stack>
@@ -216,6 +223,114 @@ export const getContentDialog = (
                             }
                             btnText={"bitperfect"}
                         />
+                    </Typography>
+                </Stack>
+            );
+        }
+    }
+    if (projectId === 3) {
+        if (section === "title") {
+            return (
+                <Stack>
+                    <CustomizedTypography title>
+                        Convolutional Neural Network
+                    </CustomizedTypography>
+                    <CustomizedTypography subtitle>
+                        (October 2021 - March 2022)
+                    </CustomizedTypography>
+                </Stack>
+            );
+        }
+        if (section === "text") {
+            return (
+                <Stack alignItems="center">
+                    <CustomizedTypography>
+                        During my internship, I developed a machine learning
+                        model aimed at enhancing the efficiency of analyzing
+                        Frequency Following Responses (FFRs) in neonates, a
+                        critical component in early detection of auditory
+                        processing disorders. My work centered around
+                        implementing a supervised deep learning approach using a
+                        1D Convolutional Neural Network (CNN) to classify neural
+                        responses elicited by speech stimuli.
+                    </CustomizedTypography>
+                    <CustomizedTypography>
+                        Key Technical Contributions:
+                    </CustomizedTypography>
+                    <CustomizedTypography>
+                        <CustomizedTypography>
+                            Data Preparation and Preprocessing: Managed a
+                            dataset comprising EEG recordings from 86 neonates
+                            exposed to two different speech stimuli (/da/ and
+                            /oa/). Employed Python for data preprocessing,
+                            converting binary EEG files into a usable matrix
+                            format, and ensuring the data was structured for
+                            model training.
+                        </CustomizedTypography>
+                        <CustomizedTypography>
+                            Model Development: Designed and implemented a 1D CNN
+                            architecture specifically tailored for time-series
+                            EEG data, incorporating techniques such as:
+                            <List>
+                                <CustomizedListItem>
+                                    - Batch Normalization: Enhanced training
+                                    speed and stability by normalizing layer
+                                    inputs.
+                                </CustomizedListItem>
+                                <CustomizedListItem>
+                                    - Dropout Regularization: Mitigated
+                                    overfitting by randomly disabling a fraction
+                                    of neurons during training.
+                                </CustomizedListItem>
+                                <CustomizedListItem>
+                                    - Hyperparameter Tuning: Optimized model
+                                    parameters (e.g., learning rate, batch size,
+                                    number of filters) to achieve high
+                                    classification accuracy.
+                                </CustomizedListItem>
+                            </List>
+                        </CustomizedTypography>
+                        <CustomizedTypography>
+                            Performance Metrics: Achieved a classification
+                            accuracy of 98.12% on the binary classification
+                            task, demonstrating the model's effectiveness in
+                            distinguishing between responses to different
+                            stimuli. Evaluated model performance using metrics
+                            beyond accuracy, including Precision (97.66%),
+                            Recall (99%), and Area Under the Curve (AUC 99.91%),
+                            ensuring a robust assessment of the model’s
+                            capability to handle imbalanced datasets.
+                        </CustomizedTypography>
+                        <CustomizedTypography>
+                            Implementation and Tools: Utilized Google Colab for
+                            model training, leveraging GPU acceleration to
+                            enhance computational efficiency. Employed libraries
+                            such as TensorFlow and Keras for building and
+                            training the CNN.
+                        </CustomizedTypography>
+                    </CustomizedTypography>
+                    <CustomizedTypography tools>
+                        Python | TensorFlow | Keras | Google Colab | EEG Data
+                        Processing | Convolutional Neural Networks | Deep
+                        Learning | Classification
+                    </CustomizedTypography>
+                    <Typography variant={"h6"}>
+                        <Button
+                            onClick={() => {
+                                window.open(
+                                    masterThesisPDF,
+                                    "_blank",
+                                    "noopener,noreferrer"
+                                );
+                            }}
+                            style={{
+                                ...iconButtonStyle,
+                                marginTop: "0.5rem",
+                                fontSize: "3.5vh",
+                            }}
+                        >
+                            <FaRegFilePdf />
+                        </Button>
                     </Typography>
                 </Stack>
             );

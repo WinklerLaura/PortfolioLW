@@ -4,6 +4,7 @@ import { myColors } from "../../utils/myColors";
 
 interface CustomizedTypographyProps extends PropsWithChildren {
     title?: boolean;
+    subtitle?: boolean;
     tools?: boolean;
 }
 
@@ -11,6 +12,7 @@ const titleStyle = {
     color: myColors.beige,
     fontWeight: "bold",
     textAlign: "center",
+    fontSize: "1.2rem",
 };
 
 const toolsStyle = {
@@ -19,18 +21,21 @@ const toolsStyle = {
 
 export const CustomizedTypography = ({
     title,
+    subtitle,
     tools,
     children,
 }: CustomizedTypographyProps) => {
     return (
         <Typography
             sx={{
-                marginBottom: "1rem",
-                textAlign: title
-                    ? { ...titleStyle }
-                    : tools
-                      ? { ...toolsStyle }
-                      : "justify",
+                marginBottom: title ? "none" : "1rem",
+                fontSize: "1rem",
+                textAlign:
+                    title || subtitle
+                        ? { ...titleStyle }
+                        : tools
+                          ? { ...toolsStyle }
+                          : "justify",
             }}
         >
             {children}

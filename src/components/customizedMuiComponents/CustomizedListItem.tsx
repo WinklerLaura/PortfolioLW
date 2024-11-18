@@ -7,6 +7,7 @@ export const CustomizedListItem = ({ children }: PropsWithChildren) => (
             typography: "body1",
             marginBottom: "0.5rem",
             textAlign: "justify",
+            fontSize: "1rem",
         }}
     >
         {children}
