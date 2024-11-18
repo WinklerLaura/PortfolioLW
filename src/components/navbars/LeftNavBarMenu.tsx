@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import LeftNavMenuButton from "../customizedMuiComponents/LeftNavMenuButton";
 import { myFontSizes } from "../../utils/myFontSizes";
+import { CustomizedLeftNavBarMenuButton } from "../customizedMuiComponents/CustomizedLeftNavMenuButton";
 import styles from "./LeftNavBarMenu.module.css";
 
 interface MenuItem {
@@ -30,14 +30,13 @@ export const LeftNavBarMenu = () => {
     ];
 
     const handleClick = (item: MenuItem) => {
-        console.log(`Clicked: ${item.label}, path: ${item.path}`);
         navigate(item.path);
     };
 
     return (
         <div className={styles.leftNavMenu}>
             {menuItems.map((item) => (
-                <LeftNavMenuButton
+                <CustomizedLeftNavBarMenuButton
                     key={item.path}
                     onClick={() => handleClick(item)}
                     sx={{
@@ -50,7 +49,7 @@ export const LeftNavBarMenu = () => {
                     }}
                 >
                     {item.label}
-                </LeftNavMenuButton>
+                </CustomizedLeftNavBarMenuButton>
             ))}
         </div>
     );

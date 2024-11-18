@@ -2,7 +2,8 @@ import styles from "./PageLayout.module.css";
 import linesGraphic from "../../assets/linesGraphic.svg";
 import curvedGraphic from "../../assets/curvedGraphic.svg";
 import { PropsWithChildren } from "react";
-import { Box } from "@mui/material";
+
+import { CustomizedBox } from "../customizedMuiComponents/CustomizedBox";
 
 interface PageLayoutProps extends PropsWithChildren {
     image: string;
@@ -14,16 +15,6 @@ export const PageLayout = ({
     image,
     children,
 }: PageLayoutProps) => {
-    const boxStyle = backgroundBox
-        ? {
-              width: "40vw",
-              bgcolor: "rgb(221, 213, 201, 0.04)",
-              padding: "1.2rem",
-              borderRadius: "25px",
-              boxShadow: "2px 2px rgba(0, 0, 0, 0.1)",
-          }
-        : null;
-
     const currentImage = image;
 
     return (
@@ -47,13 +38,9 @@ export const PageLayout = ({
                 />
             </div>
             <div className={styles.content}>
-                <Box
-                    sx={{
-                        ...boxStyle,
-                    }}
-                >
+                <CustomizedBox backgroundBox={backgroundBox}>
                     {children}
-                </Box>
+                </CustomizedBox>
             </div>
 
             <div className={styles.rightGraphics}>

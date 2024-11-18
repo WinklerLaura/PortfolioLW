@@ -1,46 +1,46 @@
-import {
-    Button,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    useMediaQuery,
-} from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Button, DialogContent, DialogContentText } from "@mui/material";
+import { overflowYStyle, StyledDialog } from "../../../muiTheme";
+import { RiCloseCircleLine } from "react-icons/ri";
+import { getContentDialog } from "../../../textContent/getContentDialog";
 
 interface ProjectsModalProps {
     open: boolean;
     onOpenModal: (open: boolean) => void;
+    projectId: number | null;
 }
-export const ProjectsModal = ({ open, onOpenModal }: ProjectsModalProps) => {
+export const ProjectsModal = ({
+    open,
+    onOpenModal,
+    projectId,
+}: ProjectsModalProps) => {
     const handleClose = () => {
         onOpenModal(false);
     };
 
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
-
     return (
-        <Dialog
-            fullScreen={fullScreen}
+        <StyledDialog
             open={open}
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
         >
-            <DialogTitle id="responsive-dialog-title">
-                {"ProjectHeader"}
-            </DialogTitle>
-            <DialogContent>
+            <Button
+                onClick={handleClose}
+                sx={{
+                    justifyContent: "flex-end",
+                    marginTop: "0.5rem",
+                    marginRight: "0.5rem",
+                }}
+            >
+                <RiCloseCircleLine />
+            </Button>
+            <DialogContent sx={{ ...overflowYStyle }}>
                 <DialogContentText>
-                    Hello world! here are my projects for you to see.
+                    {getContentDialog(projectId, "title")}
+                </DialogContentText>
+                <DialogContentText>
+                    {getContentDialog(projectId, "text")}
                 </DialogContentText>
             </DialogContent>
-            <DialogActions>
-                <Button autoFocus onClick={handleClose}>
-                    back
-                </Button>
-            </DialogActions>
-        </Dialog>
+        </StyledDialog>
     );
 };

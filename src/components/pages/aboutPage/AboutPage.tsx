@@ -1,10 +1,10 @@
 import { Typography } from "@mui/material";
 import { PageLayout } from "../PageLayout";
-import styles from "../Pages.module.css";
 import { myColors } from "../../../utils/myColors";
 import { myFontSizes } from "../../../utils/myFontSizes";
-import { contentAboutPage } from "../../../textContent/contentAboutPage";
+import { getContentAboutPage } from "../../../textContent/getContentAboutPage";
 import headerAbout from "../../../assets/headerGraphics/headerAbout.svg";
+import styles from "../Pages.module.css";
 
 export const AboutPage = () => {
     return (
@@ -25,9 +25,9 @@ export const AboutPage = () => {
                             },
                         }}
                     >
-                        {contentAboutPage.title}
+                        {getContentAboutPage.title}
                     </Typography>
-                    {contentAboutPage.textSections.map((section) => (
+                    {getContentAboutPage.textSections.map((section) => (
                         <Typography
                             key={section.id}
                             sx={{
