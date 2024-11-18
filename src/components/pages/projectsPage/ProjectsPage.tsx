@@ -1,6 +1,5 @@
 import { PageLayout } from "../PageLayout";
 import { Box, CardContent, CardMedia } from "@mui/material";
-import { cardMediaStyle, parentCardStyle } from "./cardStyles";
 import headerProjects from "../../../assets/headerGraphics/headerProjects.svg";
 import project1 from "../../../assets/projectImages/project1.svg";
 import project2 from "../../../assets/projectImages/project2.svg";
@@ -8,6 +7,7 @@ import project3 from "../../../assets/projectImages/project3.svg";
 import project4 from "../../../assets/projectImages/project4.svg";
 import { useState } from "react";
 import { ProjectsModal } from "./ProjectsModal";
+import { cardMediaStyle, parentCardStyle } from "../../../muiTheme";
 
 export const ProjectsPage = () => {
     const [openModal, setOpenModal] = useState(false);

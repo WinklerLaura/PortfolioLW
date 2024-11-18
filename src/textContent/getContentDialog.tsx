@@ -1,7 +1,8 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, List, Stack, Typography } from "@mui/material";
 import { FaSquareGithub } from "react-icons/fa6";
 import { iconButtonStyle } from "../muiTheme";
 import { myColors } from "../utils/myColors";
+import { CustomizedListItem } from "../components/customizedMuiComponents/CustomizedListItem";
 
 export const titleStyle = {
     color: myColors.beige,
@@ -95,32 +96,33 @@ export const getContentDialog = (
                         contributing to UN Sustainable Development
                     </Typography>
                     <Typography variant={"body1"}>
-                        <ul>
-                            <li>
-                                Implemented Gmail API integration to
+                        <List>
+                            <CustomizedListItem>
+                                - Implemented Gmail API integration to
                                 programmatically access and process Google Alert
                                 notifications, establishing an automated data
                                 collection pipeline
-                            </li>
-                            <li>
-                                Developed a Python script to extract and parse
+                            </CustomizedListItem>
+                            <CustomizedListItem>
+                                - Developed a Python script to extract and parse
                                 trafficking-related news articles from Gmail
                                 alerts, eliminating manual monitoring
-                            </li>
-                            <li>
-                                Engineered data extraction pipelines to
+                            </CustomizedListItem>
+                            <CustomizedListItem>
+                                - Engineered data extraction pipelines to
                                 consolidate information Google Alerts
-                            </li>
-                            <li>
-                                Integrated OpenAI's API to perform automated
+                            </CustomizedListItem>
+                            <CustomizedListItem>
+                                - Integrated OpenAI's API to perform automated
                                 analysis of news articles, enabling rapid
                                 identification and categorization of trafficking
                                 incidents
-                            </li>
-                        </ul>
+                            </CustomizedListItem>
+                        </List>
                     </Typography>
                     <Typography variant={"body1"} sx={{ marginTop: "1rem" }}>
-                        Python | Docker | Gmail API | OpenAI API
+                        Python | Docker | Gmail API | OpenAI API | LLM
+                        Integration
                     </Typography>
                 </Stack>
             );

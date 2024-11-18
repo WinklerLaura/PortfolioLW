@@ -1,5 +1,5 @@
 import { Button, DialogContent, DialogContentText } from "@mui/material";
-import { StyledDialog } from "../../../muiTheme";
+import { overflowYStyle, StyledDialog } from "../../../muiTheme";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { getContentDialog } from "../../../textContent/getContentDialog";
 
@@ -33,7 +33,7 @@ export const ProjectsModal = ({
             >
                 <RiCloseCircleLine />
             </Button>
-            <DialogContent>
+            <DialogContent sx={{ ...overflowYStyle }}>
                 <DialogContentText>
                     {getContentDialog(projectId, "title")}
                 </DialogContentText>
